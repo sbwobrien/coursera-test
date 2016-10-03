@@ -1,0 +1,15 @@
+
+<div class="row">
+<h3 style="text-align:left">Title: {{ list.myTitle }}</h3>
+</div>
+
+<div ng-repeat="item in list.items">
+	<div class="row">
+	  <div class="col-lg-8">{{ item.name }}, {{ item.short_name }}, {{ item.description }} </div>
+	  <div class="col-lg-4">
+		   <button class="btn btn-primary" ng-click="list.onRemove({index: $index});">"Don't want this one!"</button> 
+	  </div>
+  </div>
+</div>
+
+</di>
