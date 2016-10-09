@@ -1,0 +1,6 @@
+
+<div ng-repeat="item in $ctrl.items">
+	<div class="row">
+		<a ui-sref="categories.items({itemId: $index})">{{ item.name }}</a>
+  </div>
+</div>
