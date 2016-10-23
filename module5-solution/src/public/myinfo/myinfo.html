@@ -1,0 +1,24 @@
+<div ng-show="myInfoCtrl.isRegistered()">
+
+  <div><span>First Name : </span>
+    {{ myInfoCtrl.person.first_name }}
+  </div>
+  <div><span>Email Address : </span>
+    {{  myInfoCtrl.person.email_address  }}
+  </div>
+  <div><span>Phone Number : </span>
+    {{  myInfoCtrl.person.phone_number }}
+  </div>
+  <div><span>Favourite Menu Number : </span>
+    {{ myInfoCtrl.person.menu_number }}
+  </div>
+  <div>
+    <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.person.menu_number}}.jpg" alt="{{myInfoCtrl.person.menu_number}}">
+  </div>
+  <div><span> {{ myInfoCtrl.menu_item.name }}</span></div>
+  <div><span> {{ myInfoCtrl.menu_item.description }}</span></div>
+
+</div>
+<p ng-show="!myInfoCtrl.isRegistered()">Not Signed Up Yet.</br>
+  <a ui-sref="public.signup">Sign up Now</a>
+</p>

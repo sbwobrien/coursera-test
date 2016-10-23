@@ -1,0 +1,38 @@
+
+<div>
+	    <form name="personform" ng-submit="signUpCtrl.submit()" novalidate>
+
+    			<!-- First Name -->
+    			<div class="form-group">
+    				<label>First Name</label>
+    				<input type="text" name="first_name" class="form-control" ng-model="signUpCtrl.person.first_name" ng-minlength="1" ng-maxlength="20" required>
+    				<p ng-show="personform.first_name.$invalid && !personform.first_name.$pristine">You name is required.</p>
+    			</div>
+
+    			<!-- Email Address -->
+    			<div class="form-group">
+    				<label>Email Address</label>
+    				<input type="email" name="email_address" class="form-control" ng-model="signUpCtrl.person.email_address" required>
+    				<p ng-show="personform.email_address.$invalid && !personform.email_address.$pristine">Enter a valid email.</p>
+    			</div>
+
+    			<!-- Phone Number -->
+    			<div class="form-group">
+    				<label>Phone Number</label>
+    				<input type="tel" name="phone_number" class="form-control" ng-model="signUpCtrl.person.phone_number" ng-minlength="1" ng-maxlength="12">
+    				<p ng-show="personform.phone_number.$invalid && !personform.phone_number.$pristine">Enter a valid phone number.</p>
+    			</div>
+
+    			<!-- Menu no of favourite dish -->
+    			<div class="form-group">
+    				<label>Menu no of favourite dish</label>
+    				<input type="text" name="menu_number" class="form-control" ng-model="signUpCtrl.person.menu_number" ng-minlength="1" ng-maxlength="20">
+    				<p ng-show="personform.menu_number.$invalid && !personform.menu_number.$pristine">Enter a valid menu number.</p>
+    				<p ng-show="!signUpCtrl.isMenuNumberValid">No such menu number exists.</p>
+    			</div>
+
+          <button type="submit" class="btn btn-primary" ng-disabled="personform.$invalid">Submit</button>
+          <p ng-show="signUpCtrl.infoSaved">Your information has been saved.</p>
+
+       </form>
+</div>
